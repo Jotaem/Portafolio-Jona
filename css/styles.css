@@ -1,0 +1,80 @@
+/* CCS para complementar estilos integrados con Bootstrap */
+:root {
+  --primary-color: #f90050;
+  --dark-bg: #1a1a1a;
+  --body-bg: #121212;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--body-bg) !important;
+}
+
+.text-primary-custom {
+  color: var(--primary-color) !important;
+}
+
+.bg-dark-custom {
+    background-color: var(--dark-bg) !important;
+}
+
+.btn-outline-primary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* foto de perfil */
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f90050;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+  cursor: pointer;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 0 25px var(--primary-color);
+}
+
+/* Títulos de sección */
+.card-title {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Logos */
+.tech-logos img {
+  width: 60px;
+  height: 60px;
+  filter: grayscale(100%) brightness(1.5);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.tech-logos img:hover {
+  filter: none;
+  transform: scale(1.2);
+}
+
+/* Aparición para las secciones */
+.section-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
